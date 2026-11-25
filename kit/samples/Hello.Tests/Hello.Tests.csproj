@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <StackManagerSdk>$(MSBuildThisFileDirectory)../..</StackManagerSdk>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Hello/Hello.csproj" />
+    <Reference Include="StackManager.Extensions.Sdk">
+      <HintPath>$(StackManagerSdk)/lib/StackManager.Extensions.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="StackManager.Extensions.Testing">
+      <HintPath>$(StackManagerSdk)/lib/StackManager.Extensions.Testing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

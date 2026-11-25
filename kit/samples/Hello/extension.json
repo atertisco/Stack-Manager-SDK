@@ -1,0 +1,12 @@
+{
+  "id": "hello",
+  "name": "Hello",
+  "version": "1.0.0.0",
+  "apiVersion": "0.1",
+  "publisher": "Your name",
+  "description": "A small example that shows the stack status.",
+  "entry": "Hello.dll",
+  "capabilities": [ "read.status" ],
+  "license": { "type": "free" },
+  "files": []
+}

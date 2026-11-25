@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+
+    <!-- This sample is in the kit, so it finds the SDK two folders up. Your own project uses the environment variable STACKMANAGER_SDK. -->
+    <StackManagerSdk>$(MSBuildThisFileDirectory)../..</StackManagerSdk>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="StackManager.Extensions.Sdk">
+      <HintPath>$(StackManagerSdk)/lib/StackManager.Extensions.Sdk.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="extension.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+{
+  "id": "extension-id",
+  "name": "MyExtension",
+  "version": "1.0.0.0",
+  "apiVersion": "0.1",
+  "publisher": "PUBLISHER_NAME",
+  "description": "Describe what the extension does in one sentence.",
+  "entry": "MyExtension.dll",
+  "capabilities": [ "read.status" ],
+  "license": { "type": "free" },
+  "files": []
+}

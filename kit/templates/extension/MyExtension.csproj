@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+
+    <!-- The folder of the SDK kit. Set the environment variable STACKMANAGER_SDK to it, or pass -p:StackManagerSdk=<folder>. -->
+    <StackManagerSdk Condition="'$(StackManagerSdk)' == ''">$(STACKMANAGER_SDK)</StackManagerSdk>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Private=false keeps the SDK out of the package. The application has its own copy. -->
+    <Reference Include="StackManager.Extensions.Sdk">
+      <HintPath>$(StackManagerSdk)/lib/StackManager.Extensions.Sdk.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="extension.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <Target Name="CheckSdkFolder" BeforeTargets="ResolveAssemblyReferences" Condition="!Exists('$(StackManagerSdk)/lib/StackManager.Extensions.Sdk.dll')">
+    <Error Text="The SDK was not found. Set the environment variable STACKMANAGER_SDK to the folder of the SDK kit, for example C:\StackManagerSdk, and start the console again." />
+  </Target>
+
+</Project>
