@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>StackManager.Extensions.Sdk</PackageId>
+    <Version>0.1.0</Version>
+    <Authors>Synsoft Solutions</Authors>
+    <Copyright>Copyright (c) 2026, Synsoft Solutions</Copyright>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+    <Description>Contracts for Stack Manager extensions. Preview.</Description>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+</Project>

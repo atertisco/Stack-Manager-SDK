@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="src/StackManager.Extensions.Sdk/StackManager.Extensions.Sdk.csproj" />
+  <Project Path="src/StackManager.Extensions.Packaging/StackManager.Extensions.Packaging.csproj" />
+  <Project Path="src/StackManager.Extensions.Testing/StackManager.Extensions.Testing.csproj" />
+  <Project Path="src/StackManager.Extensions.Pack/StackManager.Extensions.Pack.csproj" />
+</Solution>
